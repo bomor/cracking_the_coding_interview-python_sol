@@ -32,17 +32,10 @@ def delete_dups2(head):
 		
 ############## Tests ##############
 
-def test_delete_dups():
+@pytest.mark.parametrize("impl", [delete_dups, delete_dups2])
+def test_delete_dups(impl):
 	n = create_list()
-	delete_dups(n)
-	assert n.val == 1
-	assert n.next.val == 3
-	assert n.next.next.val == 4
-	assert n.next.next.next == None
-
-def test_delete_dups2():
-	n = create_list()
-	delete_dups(n)
+	impl(n)
 	assert n.val == 1
 	assert n.next.val == 3
 	assert n.next.next.val == 4
