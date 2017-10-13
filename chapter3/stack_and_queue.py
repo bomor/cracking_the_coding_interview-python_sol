@@ -4,8 +4,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "..", "chapter2"))
 from node import Node
 
 class Stack(object):
-	def __init__(self, val):
-		self.top = Node(val)
+	def __init__(self):
+		self.top = None
 	def pop(self):
 		if not self.top:
 			return None
@@ -17,7 +17,11 @@ class Stack(object):
 		new_top.next = self.top
 		self.top = new_top
 	def peek(self):
-		return self.top
+		if not self.top:
+			return None
+		return self.top.val
+	def is_empty(self):
+		return self.top == None
 
 
 class Queue(object):

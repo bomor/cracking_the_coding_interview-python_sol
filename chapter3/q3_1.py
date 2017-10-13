@@ -76,9 +76,7 @@ class ThreeStacks2(object):
 	
 	def is_empty(self, stack_id):
 		return self.indices[stack_id] < 0
-
-############## Tests ##############
-
+	
 @pytest.mark.parametrize("impl", [ThreeStacks(10), ThreeStacks2()])		
 def test_three_stacks(impl):
 	s1 = stack1()
@@ -104,15 +102,18 @@ def push_to_s1s2s3(s1s2s3):
 	s1s2s3.push(2,5)
 
 def stack1():
-	s = Stack(0)
+	s = Stack()
+	s.push(0)
 	s.push(1)
 
 
 def stack2():
-	s = Stack(2)
+	s = Stack()
+	s.push(2)
 	s.push(3)
 
 
 def stack3():
-	s = Stack(4)
+	s = Stack()
+	s.push(4)
 	s.push(5)
