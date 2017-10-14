@@ -25,9 +25,9 @@ class Stack(object):
 
 
 class Queue(object):
-	def __init__(self, val):
-		self.last = Node(val)
-		self.first = self.last
+	def __init__(self):
+		self.last = None
+		self.first = None
 	def enqueue(self, val):
 		new_last = Node(val)
 		if not self.first:

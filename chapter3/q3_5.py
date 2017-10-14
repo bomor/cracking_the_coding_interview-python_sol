@@ -1,5 +1,4 @@
-from stack_and_queue import Stack
-import pytest
+from stack_and_queue import Stack, Queue
 
 class MyQueue(object):
 	def __init__(self):
@@ -18,11 +17,14 @@ class MyQueue(object):
 ############## Tests ##############
 
 def test_my_queue():
-	q = MyQueue()
-	q.enqueue(1)
-	q.enqueue(2)
-	assert q.dequeue() == 1
-	assert q.dequeue() == 2
-	assert not q.dequeue()
-	q.enqueue(1)
-	assert q.dequeue() == 1
+	q1 = MyQueue()
+	q2 = Queue()
+	q1.enqueue(1)
+	q2.enqueue(1)
+	q1.enqueue(2)
+	q2.enqueue(2)
+	for i in xrange(3):
+		assert q1.dequeue() == q2.dequeue()
+	q1.enqueue(1)
+	q2.enqueue(1)
+	assert q1.dequeue() == q2.dequeue()
