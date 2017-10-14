@@ -18,6 +18,11 @@ def test_rotate_90():
 	rotate_90(n)
 	assert m == rotated_90_matrix_4x4()
 	assert n == [[0]]
+	rotate_90(m)
+	rotate_90(m)
+	rotate_90(m)
+	assert matrix_4x4() == m
+	
 
 def matrix_4x4():
 	return [[1, 2, 3, 4],
