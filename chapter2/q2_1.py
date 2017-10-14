@@ -6,7 +6,7 @@ import pytest
 def delete_dups(n):
 	list_vals = set()
 	previous = Node(None)
-	while n != None:
+	while n:
 		if n.val in list_vals:
 			previous.next = n.next
 
@@ -20,10 +20,10 @@ def delete_dups(n):
 
 def delete_dups2(head):
 	current = head
-	while current != None:
+	while current:
 		runner = current.next
 		previous = current
-		while runner != None:
+		while runner:
 			if current.val == runner.val:
 				previous.next = runner.next
 			else:
@@ -40,4 +40,4 @@ def test_delete_dups(impl):
 	assert n.val == 1
 	assert n.next.val == 3
 	assert n.next.next.val == 4
-	assert n.next.next.next == None
+	assert not n.next.next.next
