@@ -9,13 +9,13 @@ def add_lists(l1, l2, carry):
 			return Node(carry)
 	else:
 		if not l1:
-			sum = l2.val + carry
+			total = l2.val + carry
 		elif not l2:
-			sum = l1.val + carry
+			total = l1.val + carry
 		else:
-			sum = l1.val + l2.val + carry
-	result_node = Node(sum % 10)
-	n = add_lists(l1.next if l1 else None, l2.next if l2 else None, sum / 10)
+			total = l1.val + l2.val + carry
+	result_node = Node(total % 10)
+	n = add_lists(l1.next if l1 else None, l2.next if l2 else None, total / 10)
 	result_node.next = n
 	return result_node
 	
