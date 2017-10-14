@@ -4,7 +4,7 @@ from node import Node
 def add_lists(l1, l2, carry):
 	if not l1 and not l2:
 		if not carry:
-			return None
+			return
 		else:
 			return Node(carry)
 	else:
