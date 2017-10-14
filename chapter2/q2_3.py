@@ -3,7 +3,7 @@ from node import Node, create_list
 # NOTE: If the node is the last node - it will not be deleted!
 
 def delete_node(n):
-	if not n.next or not n:
+	if not n or not n.next:
 		return False 
 	n.val = n.next.val 
 	n.next = n.next.next
