@@ -5,8 +5,8 @@ def minimal_height_tree(arr):
 		return None
 	root_index = len(arr) / 2
 	root = TreeNode(arr[root_index])
-	root .left = minimal_height_tree(arr[:root_index])
-	root .right = minimal_height_tree(arr[root_index + 1:])
+	root.left = minimal_height_tree(arr[:root_index])
+	root.right = minimal_height_tree(arr[root_index + 1:])
 	return root 
 	
 ############## Tests ##############	
