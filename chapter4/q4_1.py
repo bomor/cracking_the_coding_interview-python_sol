@@ -7,8 +7,6 @@ import pytest
 # between max_depth and min_depth.
 
 def is_balanced(t):
-	print max_depth(t)
-	print min_depth(t)
 	return max_depth(t) - min_depth(t) <= 1
 
 def max_depth(t):
