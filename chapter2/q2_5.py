@@ -5,14 +5,14 @@ def find_loop_beg(head):
 	s = head
 	f = head
 	# Find the meeting point
-	while f.next != None:
+	while f.next :
 		s = s.next
 		f = f.next.next
 		if s == f:
 			break
 	# Check if list has a loop
 	if not f.next:
-		return None
+		return
 	s = head
 	while s != f:
 		s = s.next
