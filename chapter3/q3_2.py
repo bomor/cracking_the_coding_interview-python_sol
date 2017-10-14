@@ -21,7 +21,7 @@ class StackWithMin(Stack):
 
 	def min(self):
 		if not self.top:
-			return None
+			return 
 		return self.top.min
 
 class StackNode(Node):
@@ -29,8 +29,7 @@ class StackNode(Node):
 		self.val = val
 		self.min = min
 		super(StackNode, self).__init__(val)
-
-
+		
 #OR
 
 class StackWithMin2(Stack):
