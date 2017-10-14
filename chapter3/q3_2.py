@@ -1,10 +1,10 @@
 import pytest
 from stack_and_queue import Node, Stack
 
-# In this Approach, each node in the stack keep track of
+# In this Approach, each node in the stack keeps a track of
 # the minimum beneath itself.
 # NOTE: If we have a large stack, we waste a lot of space
-# by keeping track of the min for every single element.
+# by keeping a track of the min for every single element.
 
 class StackWithMin(Stack):
 	def __init__(self):
