@@ -14,7 +14,6 @@ def delete_dups(n):
 			list_vals.add(n.val)
 			previous = n
 		n = n.next
-		print list_vals
 		
 # OR (Without an additional buffer)
 
