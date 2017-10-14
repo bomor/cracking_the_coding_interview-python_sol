@@ -6,9 +6,6 @@ import pytest
 # makes the code shorter. Anyway, is_balanced DOES return the real bool (it checks the diff
 # between max_depth and min_depth.
 
-def is_balanced(t):
-	return max_depth(t) - min_depth(t) <= 1
-
 def max_depth(t):
 	if not t:
 		return 0
@@ -18,6 +15,9 @@ def min_depth(t):
 	if not t:
 		return 0
 	return 1 + min(min_depth(t.left), min_depth(t.right))
+
+def is_balanced(t):
+	return max_depth(t) - min_depth(t) <= 1
 
 ############## Tests ##############	
 
