@@ -19,12 +19,12 @@ class ThreeStacks(object):
 		new_val = StackNode(self.indices[stack_id], val)
 		self.arr[self.current_index] = new_val
 		self.indices[stack_id] = self.current_index
-		self.current_index +=1
+		self.current_index += 1
 		return True
 
 	def pop(self, stack_id):
 		if self.is_empty(stack_id):
-			return None
+			return
 		n_to_pop = self.arr[self.indices[stack_id]]
 		val = n_to_pop.val
 		previous_index = n_to_pop.previous_index
@@ -58,7 +58,7 @@ class ThreeStacks2(object):
 	def push(self, stack_id, val):
 		self.indices[stack_id] += 3
 		if self.indices[stack_id] >= len(self.arr):
-			self.arr = self.arr + [None]*3
+			self.arr = self.arr + [None] * 3
 		self.arr[self.indices[stack_id]] = val
 
 	def pop(self, stack_id):
