@@ -1,11 +1,11 @@
 import pytest
-# 1.4
+
 
 def are_anagrams(s1, s2):
     return sorted(s1) == sorted(s2)
 
-# OR
 
+# OR
 def are_anagrams2(s1, s2):
     if len(s1) != len(s2):
         return False
@@ -18,10 +18,11 @@ def are_anagrams2(s1, s2):
         ch_counter[ord(ch)] -= 1
     return all(v == 0 for v in ch_counter)
 
-############## Tests ##############
+
+# Tests
 
 @pytest.mark.parametrize("impl", [are_anagrams, are_anagrams2])
 def test_are_anagrams(impl):
-	assert impl("abcd", "badc")
-	assert not impl("aaab", "aab")
-	assert not impl("AaBb", "aabb")
+    assert impl("abcd", "badc")
+    assert not impl("aaab", "aab")
+    assert not impl("AaBb", "aabb")

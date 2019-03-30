@@ -1,5 +1,6 @@
 import pytest
-# 1.3
+
+
 # (That way, we assume that lowercase<ch> != uppercase<ch>. Note that we get str, so that way we use an extra array)
 def remove_dup_chars(my_str):
     if not my_str:
@@ -21,10 +22,11 @@ def remove_dup_chars2(my_str):
             my_str = my_str[:i] + my_str[i + 1:]
     return my_str
 
-############## Tests ##############
+
+# Tests
 
 @pytest.mark.parametrize("impl", [remove_dup_chars, remove_dup_chars2])
 def test_remove_dup_chars(impl):
-	assert impl("AaBbCc") == "AaBbCc"
-	assert impl("aaabbbccc") == "abc"
-	assert impl(None) == ""
+    assert impl("AaBbCc") == "AaBbCc"
+    assert impl("aaabbbccc") == "abc"
+    assert impl(None) == ""

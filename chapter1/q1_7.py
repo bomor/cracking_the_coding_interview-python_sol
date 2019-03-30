@@ -15,22 +15,25 @@ def set_zero(m):
     for c in zero_cols:
         for r in xrange(m_rows):
             m[r][c] = 0
- 
-############## Tests ##############
+
+
+# Tests
 
 def test_set_zero():
-	m = matrix_befor_set()
-	set_zero(m)
-	assert m == matrix_after_set()
-	
-def matrix_befor_set():
-	return [[0, 1, 2, 3],
-			[4, 5, 6, 0],
-			[8, 9, 10, 11],
-			[12, 13, 14, 15]]
+    m = matrix_before_set()
+    set_zero(m)
+    assert m == matrix_after_set()
+
+
+def matrix_before_set():
+    return [[0, 1, 2, 3],
+            [4, 5, 6, 0],
+            [8, 9, 10, 11],
+            [12, 13, 14, 15]]
+
 
 def matrix_after_set():
-	return [[0, 0, 0, 0],
-			[0, 0, 0, 0],
-			[0, 9, 10, 0],
-			[0, 13, 14, 0]]
+    return [[0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 9, 10, 0],
+            [0, 13, 14, 0]]

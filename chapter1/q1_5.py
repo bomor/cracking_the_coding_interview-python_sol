@@ -1,11 +1,12 @@
 import pytest
-# 1.5 (The easiest way would be to use a built in str func)
 
+
+# 1.5 (The easiest way would be to use a built in str func)
 def replace_spaces(s):
     return s.replace(" ", "%20")
 
-# OR
 
+# OR
 def replace_spaces2(s):
     ch_list = list(s)
     spaces_counter = 0
@@ -26,9 +27,10 @@ def replace_spaces2(s):
             next_new_index -= 1
     return "".join(ch_list)
 
-############## Tests ##############
+
+# Tests
 
 @pytest.mark.parametrize("impl", [replace_spaces, replace_spaces2])
 def test_replace_spaces(impl):
-	assert impl("s for test ") == "s%20for%20test%20"
-	assert impl("no_spaces") == "no_spaces"
+    assert impl("s for test ") == "s%20for%20test%20"
+    assert impl("no_spaces") == "no_spaces"
